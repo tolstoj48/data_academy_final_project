@@ -4,11 +4,15 @@ SELECT tpm.industry_name,
     max(tpm.average_wages_physical) AS average_wages_physical_prev,
     max(tpm2.average_wages_physical) AS average_wages_physical_next,
     round(
-        max(tpm2.average_wages_physical) / max(tpm.average_wages_physical),
+        100 * (
+            (
+                max(tpm2.average_wages_physical) / max(tpm.average_wages_physical)
+            ) - 1
+        ),
         2
-    ) AS change_in_wages
+    ) AS annual_change_wages_in_perc
 FROM t_petr_musil_project_SQL_primary_final tpm
-    JOIN t_petr_musil_project_SQL_primary_final tpm2 ON tpm.industry_name = tpm2.industry_name
+    INNER JOIN t_petr_musil_project_SQL_primary_final tpm2 ON tpm.industry_name = tpm2.industry_name
     AND tpm.year_cp = tpm2.year_cp - 1
 GROUP BY tpm.industry_name,
     tpm.year_cp,
