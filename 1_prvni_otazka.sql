@@ -1,12 +1,12 @@
 SELECT tpm.industry_name,
     tpm.year_cp AS year_prev,
     tpm2.year_cp AS year_next,
-    max(tpm.average_wages_physical) AS average_wages_physical_prev,
-    max(tpm2.average_wages_physical) AS average_wages_physical_next,
+    max(tpm.average_wages_counted) AS average_wages_counted_prev,
+    max(tpm2.average_wages_counted) AS average_wages_counted_next,
     round(
         100 * (
             (
-                max(tpm2.average_wages_physical) / max(tpm.average_wages_physical)
+                max(tpm2.average_wages_counted) / max(tpm.average_wages_counted)
             ) - 1
         ),
         2
