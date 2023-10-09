@@ -29,9 +29,12 @@ SELECT cpay_aggregated.year_cp,
     # Průměr za celý rok - vstup jsou všechny měření ze všech krajů ve všech časových okamžicích v daný rok a z nich se počítá průměr
     round(avg(cp.value), 2) AS average_prices,
     cpay_aggregated.average_value_counted
-FROM cpay_aggregated # Jen společné roky, proto inner join
+FROM cpay_aggregated 
+    # Jen společné roky, proto inner join
     INNER JOIN czechia_price cp ON year(cp.date_from) = cpay_aggregated.year_cp
     LEFT JOIN czechia_price_category cpc ON cp.category_code = cpc.code
+# Počítáme průměr z hodnot za celé Česko, nikoliv průměr cen z regionů
+WHERE cp.region_code IS NULL
 GROUP BY cpc.name,
 	cpc.price_unit,
     cpay_aggregated.year_cp,
