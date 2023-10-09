@@ -13,8 +13,7 @@ SELECT tpm.industry_name,
     ) AS annual_change_wages_in_perc
 FROM t_petr_musil_project_SQL_primary_final tpm
     INNER JOIN t_petr_musil_project_SQL_primary_final tpm2 ON tpm.industry_name = tpm2.industry_name
-    AND tpm.year_cp = tpm2.year_cp - 1
-WHERE tpm.value_type_code = 5958 AND tpm2.value_type_code = 5958
+    AND tpm.year_cp = tpm2.year_cp - 1 AND tpm.value_type_code = 5958
 GROUP BY tpm.industry_name,
     tpm.year_cp,
     year_next;

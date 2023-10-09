@@ -30,21 +30,21 @@ economies - HDP, GINI, daňová zátěž, atd. pro daný stát a rok.
 
 Výzkumné otázky
 1. Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
-# TODO tohle bude nutné upravit, protože pokud použijeme data zprůměrovaná za celý rok, tak je i více odvětví bez poklesu
+# TODO ještě jednou projít po datech dodělání, dokomentovat.
 Vycházíme z dat v tabulce t_petr_musil_project_SQL_primary_final, kde jsou dostupná data za roky 2006 až 2018 - společné roky.
 Pokud posuzujeme růst nominální výše mezd/platů mezi roky 2006 a 2018, došlo za celé období k růstu ve všech odvětvích.
-Meziroční přírůstky jsou ve většině let ve všech odvětvích kladné, ale zároveň platí, že každé odvětví v daném období
-zaznamenalo alespoň jeden meziroční pokles nominální výše mezd/platů. Jedinou výjimku tvořilo odvětví Zpracovatelského průmyslu, v němž 
-meziročně mzdy rostly každý rok.
+Meziroční přírůstky jsou ve většině let ve všech odvětvích kladné, ale zároveň platí, že většina odvětví v daném období
+zaznamenalo alespoň jeden meziroční pokles nominální výše mezd/platů, výjimku tvořila Doprava a skladování s jedním meziročním 
+přírůstkem rovným nule, dále Ostatní činnosti, Zdravotní a sociální péče a Zpracovatelský průmysl, v nichž meziročně mzdy rostly každý rok.
 2. Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
-# TODO
-Na tuto otázku se nedá obecně odpovědět z dostupných dat - nelze určit celkovou průměrnou mzdu za všechna odvětví. Data za počet zaměstnanců
-jsou dostupná v prvním a posledním sledovaném odbobí jen za vybraná odvětví - v roce 2006 pro čtyři a v roce 2018 pro šest.
-Nelze proto vypočítat celkovou průměrnou mzdu v Česku. Posuzovat tedy lze pouze vývoj za jednotlivá odvětví.
+# TODO překontrolovat SQL vs. popis po datech dodělání, dokomentovat.
+Na tuto otázku se nedá na základě dostupných dat obecně odpovědět - nelze určit celkovou průměrnou mzdu za všechna odvětví. Data za počet zaměstnanců
+jsou dostupná v prvním a posledním sledovaném odbobí jen za vybraná odvětví - v roce 2006 pro devět (navíc různými způsoby výpočtu dle - fyzicky, přepočtením) a v roce 2018 pro deset z 19.
+Nelze proto vypočítat celkovou průměrnou mzdu v Česku pomocí váženého průměru. Posuzovat tedy lze pouze vývoj za jednotlivá odvětví.
 Protože cena chleba vzrostla mezi lety 2006 a 2018 z 16.12 Kč na 24.24, tedy o 50.37 %, pak odvětví, v nichž docházelo k pomalejšímu
 růstu průměrných mezd (např. Administrativní a podpůrné činnosti, Činnosti v oblasti nemovitostí, Ostatní činnosti, Peněžnictví, Těžba) si pracovníci 
-mohli pořídit v roce 2018 méně jednotek chleba. Cena mléka vzrostla mezi sledovanými lety z 14.44 Kč na 19.82 Kč, což byl růst o 37.26 %.
-Proto si jednotek mléka v roce 2018 pořídit více než na začátku sledovaného období pracovníci ze všech odvětví, vyjma Peněžnictví a pojišťovnictví.
+mohli pořídit v roce 2018 méně nebo stejně jednotek chleba. Ve zbývajících odvětvích naopak více. Cena mléka pak vzrostla mezi sledovanými lety z 14.44 Kč na 19.82 Kč, což byl růst o 37.26 %.
+Proto si jednotek mléka mohli pořídit v roce 2018 více než na začátku sledovaného období pracovníci ze všech odvětví, vyjma Peněžnictví a pojišťovnictví.
 3. Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?
 # TODO
 4. Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?
