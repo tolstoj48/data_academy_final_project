@@ -1,5 +1,5 @@
-# Tady nejsou data za ty roky --> nejde dělat smysluplné vážěné průměry, protože chybí hodnoty počtu pracovníků za všechna odvětví v každém roce (už vůbec nejsou data za jednotlivé kvaráty)
-# Ani bez ohledu na způsob zisku dat nelze složit tak, aby pro každé odvětví byla alespoň jedno čtvrletí hodnota v každém roce, ani pro rok 2006 ani pro rok 2018 se to nedá dohromady -> tzn. nelze z toho dopočítat průměrné mzdy za celý
+-- Tady nejsou data za ty roky --> nejde dělat smysluplné vážěné průměry, protože chybí hodnoty počtu pracovníků za všechna odvětví v každém roce (už vůbec nejsou data za jednotlivé kvaráty)
+-- Ani bez ohledu na způsob zisku dat nelze složit tak, aby pro každé odvětví byla alespoň jedno čtvrletí hodnota v každém roce, ani pro rok 2006 ani pro rok 2018 se to nedá dohromady -> tzn. nelze z toho dopočítat průměrné mzdy za celý
 SELECT
 tpm.industry_name, 
 tpm.average_value_counted AS salary_2006,
@@ -23,14 +23,14 @@ AND tpm2.value_type_code = 5958
 AND tpm.year_cp IN (2006, 2018)
 ORDER BY tpm.year_cp, tpm.industry_name;
 
-# HELPERS
-# 
+-- HELPERS
+-- 
 select * from czechia_payroll cp inner join czechia_payroll_industry_branch cpib on cp.industry_branch_code = cpib.code 
-# value type 316 = zaměstnaných osob
+-- value type 316 = zaměstnaných osob
 where cp.value_type_code = 316 
 and cp.payroll_year between 2006 and 2018 
-# code 100 = fyzických, 200 přepočtených, ale obě jsou docela prořídlé na roky, i když se to udělá za všechny typy hodnot, tak to nedá za všechna odvětví 
-#and cp.calculation_code = 200 
-# bez hodnot to nemá cenu
+-- code 100 = fyzických, 200 přepočtených, ale obě jsou docela prořídlé na roky, i když se to udělá za všechny typy hodnot, tak to nedá za všechna odvětví 
+--and cp.calculation_code = 200 
+-- bez hodnot to nemá cenu
 and cp.value is not null
 ORDER by cp.payroll_year, cp.industry_branch_code;
