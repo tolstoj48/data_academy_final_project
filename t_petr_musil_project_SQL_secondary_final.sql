@@ -28,5 +28,7 @@ FROM
 WHERE 
     c.continent = 'Europe'
     AND e.`year` BETWEEN 2006 AND 2018
-GROUP BY c.country
-ORDER BY c.country;
+GROUP BY 
+    c.country
+ORDER BY 
+    c.country;
