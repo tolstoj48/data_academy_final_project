@@ -3,8 +3,8 @@
 ## Obsah:
 * [Úvod do projektu](#úvod-do-projektu)
 * [Vstupní datové sady pro získání podkladu](#vstupní-datové-sady-pro-získání-podkladu)
-* [Výzkumné otázky](#výzkumné-otázky)
-# [Výstupy projektu](#výstup-projektu)
+* [Výzkumné otázky a odpovědi](#výzkumné-otázky-a-odpovědi)
+* [Výstupy projektu](#výstup-projektu)
 
 ## Úvod do projektu:
 Analytické oddělení naší organizace, která se zabývá vývojem životní úrovně občanů v Česku, chce odpovědět na několik definovaných výzkumných otázek. Ty adresují dostupnost základních potravin veřejnosti. Kolegové již vydefinovali základní otázky, na které se pokusí odpovědět a poskytnout tuto informaci tiskovému oddělení, a to pro účely prezentace na následující konferenci zaměřené na tuto oblast. Požadují proto datové podklady, z kterých bude jasné porovnání dostupnosti potravin na základě průměrných příjmů za určité časové období. Jako podpůrný materiál chtějí také tabulku s HDP, GINI koeficientem a populací dalších evropských zemí, a to za stejné období jako přehled pro Česko.
@@ -12,14 +12,20 @@ Analytické oddělení naší organizace, která se zabývá vývojem životní 
 ## Vstupní datové sady pro získání podkladu:
 ## Primární tabulky:
 czechia_payroll – Informace o mzdách v různých odvětvích za několikaleté období. Datová sada pochází z Portálu otevřených dat ČR.
+
 czechia_price – Informace o cenách vybraných potravin za několikaleté období. Datová sada pochází z Portálu otevřených dat ČR.
 
 ## Podpůrné číselníky:
 czechia_payroll_calculation – Číselník kalkulací v tabulce mezd.
+
 czechia_payroll_industry_branch – Číselník odvětví v tabulce mezd.
+
 czechia_payroll_unit – Číselník jednotek hodnot v tabulce mezd.
+
 czechia_payroll_value_type – Číselník typů hodnot v tabulce mezd.
+
 czechia_price_category – Číselník kategorií potravin, které se vyskytují v našem přehledu.
+
 Číselníky sdílených informací o ČR:
 
 ## Tabulky pro evropské země:
