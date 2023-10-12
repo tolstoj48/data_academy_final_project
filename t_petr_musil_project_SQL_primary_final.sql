@@ -4,9 +4,7 @@ WITH cpay_aggregated AS (
             cpib.name AS industry_name,
             cpay.payroll_year AS year_cp,
             -- Roční průměr - v každém roce jsou čtyři měření pro každý obor
-            cpay.value_type_code AS value_type_code,
-            cpu.name AS units,
-            round(avg(cpay.value), 2) AS average_value_counted
+            round(avg(cpay.value), 2) AS average_salary_CZK
         FROM 
             czechia_payroll cpay 
             -- Každý řádek má industry_branch_code a množiny hodnot obou se shodují
@@ -20,20 +18,16 @@ WITH cpay_aggregated AS (
             AND cpay.calculation_code = 200
         GROUP BY 
             cpib.name,
-            cpay.payroll_year,
-            cpay.value_type_code,
-            cpu.name
+            cpay.payroll_year
     )
 SELECT 
     cpay_aggregated.year_cp,
     cpay_aggregated.industry_name,
-    cpay_aggregated.value_type_code,
-    cpay_aggregated.units,
-    cpay_aggregated.average_value_counted,
+    cpay_aggregated.average_salary_CZK,
     cpc.name AS food_category,
-    cpc.price_unit as price_unit,
     -- Průměr za celý rok - vstup jsou všechny měření ze všech krajů ve všech časových okamžicích v daný rok a z nich se počítá průměr
-    round(avg(cp.value), 2) AS average_prices
+    round(avg(cp.value), 2) AS average_prices,
+    cpc.price_unit as food_unit
 FROM 
     cpay_aggregated 
     -- Jen společné roky, proto inner join
@@ -46,13 +40,9 @@ GROUP BY
     cpc.name,
 	cpc.price_unit,
     cpay_aggregated.year_cp,
-    cpay_aggregated.industry_name,
-    cpay_aggregated.value_type_code,
-    cpay_aggregated.units
+    cpay_aggregated.industry_name
 ORDER BY 
     cpay_aggregated.year_cp,
     cpay_aggregated.industry_name,
     cpc.name,
-    cpc.price_unit,
-    cpay_aggregated.value_type_code,
-    cpay_aggregated.units;
+    cpc.price_unit;
