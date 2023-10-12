@@ -28,12 +28,11 @@ economies - HDP, GINI, daňová zátěž, atd. pro daný stát a rok.
 
 ## Výzkumné otázky
 ### 1. Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
---> TODO ještě jednou projít po datech dodělání, dokomentovat.
-Vycházíme z dat v tabulce t_petr_musil_project_SQL_primary_final, kde jsou dostupná data za roky 2006 až 2018 - společné roky.
-Pokud posuzujeme růst nominální výše mezd/platů mezi roky 2006 a 2018, došlo za celé období k růstu ve všech odvětvích.
+Vycházíme z dat v tabulce t_petr_musil_project_SQL_primary_final, kde jsou dostupná data za roky 2006 až 2018 - společné roky pro ceny i mzdy. Pokud posuzujeme růst nominální výše mezd/platů za celé období 2006 až 2018, došlo k růstu ve všech odvětvích.
 Meziroční přírůstky jsou ve většině let ve všech odvětvích kladné, ale zároveň platí, že většina odvětví v daném období
-zaznamenalo alespoň jeden meziroční pokles nominální výše mezd/platů, výjimku tvořila Doprava a skladování s jedním meziročním 
-přírůstkem rovným nule, dále Ostatní činnosti, Zdravotní a sociální péče a Zpracovatelský průmysl, v nichž meziročně mzdy rostly každý rok.
+zaznamenalo alespoň jeden meziroční pokles nominální výše mezd/platů. Výjimku tvořila Doprava a skladování s jedním meziročním 
+přírůstkem rovným nule, dále Ostatní činnosti, Zdravotní a sociální péče a Zpracovatelský průmysl, v nichž meziročně mzdy rostly každý rok. Největší meziroční pokles zaznemalo odvětví Peněžnictví a pojišťovnictví mezi lety 2012 a 2013 s hodnotou -8.83 %. Naopak největší meziroční růst jsme sledovali mezi lety 2007 a 2008 v odvětví Výroba a rozvod elektřiny, plynu a tepla s hodnotou +13.76 %.
+Poklesy nominálním mezd a platů lze patrně přičíst ekonomickému vývoji po finanční krizi po roce 2007-8, kdy najdeme většinu poklesů v dílčích odvětvích. Další poklesy pak byly zaznamenány z roku 2012 na 2013, což je někdy veřejností přičítáno ekonomickému poklesu vlivem fiskální politiky tehdejší české vlády.
 ### 2. Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
 --> TODO překontrolovat SQL vs. popis po datech dodělání, dokomentovat.
 Na tuto otázku se nedá na základě dostupných dat obecně odpovědět - nelze určit celkovou průměrnou mzdu za všechna odvětví. Data za počet zaměstnanců
