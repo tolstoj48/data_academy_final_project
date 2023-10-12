@@ -32,7 +32,7 @@ czechia_price_category – Číselník kategorií potravin, které se vyskytují
 countries - Všemožné informace o zemích na světě, například hlavní město, měna, národní jídlo nebo průměrná výška populace.
 economies - HDP, GINI, daňová zátěž, atd. pro daný stát a rok.
 
-## Výzkumné otázky
+## Výzkumné otázky a odpovědi
 ### 1. Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
 Vycházíme z dat v tabulce t_petr_musil_project_SQL_primary_final, kde jsou dostupná data za roky 2006 až 2018 - společné roky pro ceny i mzdy. Pokud posuzujeme růst nominální výše mezd/platů za celé období 2006 až 2018, došlo k růstu ve všech odvětvích.
 Meziroční přírůstky jsou ve většině let ve všech odvětvích kladné, ale zároveň platí, že většina odvětví v daném období
@@ -48,7 +48,7 @@ Na tuto otázku se nedá na základě dostupných dat obecně odpovědět - nelz
 ### 5. Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?
 
 ## Výstup projektu
-Výstupem jsou dvě tabulky v databázi, ze kterých se požadovaná data dají získat. Dále pak pět souborů s SQL dotazem do daných tabulek, které umožní zodpovědět výzkumné otázky:
+Výstupem jsou dvě tabulky v databázi, ze kterých se požadovaná data nutná k zodpovězení výzkumných otázek dají získat. Dále pak pět souborů s SQL dotazem do daných tabulek, které umožňují zodpovědezní výzkumných otázek:
 
 1. t_petr_musil_project_SQL_primary_final.sql - pro data mezd a cen potravin za Českou republiku sjednocených na totožné 
 porovnatelné období – společné roky. 
