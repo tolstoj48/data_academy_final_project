@@ -1,5 +1,3 @@
--- Tady nejsou data za ty roky --> nejde dělat smysluplné vážěné průměry, protože chybí hodnoty počtu pracovníků za všechna odvětví v každém roce (už vůbec nejsou data za jednotlivé kvaráty)
--- Ani bez ohledu na způsob zisku dat nelze složit tak, aby pro každé odvětví byla alespoň jedno čtvrletí hodnota v každém roce, ani pro rok 2006 ani pro rok 2018 se to nedá dohromady -> tzn. nelze z toho dopočítat průměrné mzdy za celý
 SELECT
 	max(tpm.industry_name), 
 	first_value(tpm.average_salary_CZK) OVER (PARTITION BY tpm.industry_name ORDER BY tpm.year_cp) AS salary_2006_CZK,
