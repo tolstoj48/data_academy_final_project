@@ -1,12 +1,12 @@
+-- změny ceny celého spotřebního koše meziroční
 SELECT
 	tpm.year_cp,
-	tpm.food_category,
-	tpm.industry_name,
-	round(((lead(tpm.average_prices) OVER(PARTITION BY tpm.food_category, tpm.industry_name ORDER BY tpm.year_cp) / tpm.average_prices) - 1) * 100, 2) AS annual_change_in_price,
-	round(100 * lead(tpm.average_salary_CZK) OVER (PARTITION BY tpm.industry_name, tpm.food_category ORDER BY tpm.year_cp) / tpm.average_salary_CZK - 100, 2) AS annual_change_salary,
-	round((((lead(tpm.average_prices) OVER(PARTITION BY tpm.food_category, tpm.industry_name ORDER BY tpm.year_cp) / tpm.average_prices) - 1) * 100) - (100 * lead(tpm.average_salary_CZK) OVER (PARTITION BY tpm.industry_name, tpm.food_category ORDER BY tpm.year_cp) / tpm.average_salary_CZK - 100), 2) AS difference_price_salary_change_perc
+	sum(average_prices) AS avg_price_box_current,
+	lead(sum(average_prices)) over (ORDER by tpm.year_cp) AS avg_price_box_next,
+	round(100 * (lead(sum(average_prices)) over (ORDER by tpm.year_cp) / sum(average_prices)) - 100, 2) AS annual__change_box
 FROM
 	t_petr_musil_project_SQL_primary_final tpm
-ORDER BY
-	tpm.food_category,
+WHERE
+	tpm.industry_name = 'Vzdělávání'
+GROUP BY 
 	tpm.year_cp;
