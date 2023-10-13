@@ -4,7 +4,7 @@
 * [Úvod do projektu](#úvod-do-projektu)
 * [Vstupní datové sady pro získání podkladu](#vstupní-datové-sady-pro-získání-podkladu)
 * [Výzkumné otázky a odpovědi](#výzkumné-otázky-a-odpovědi)
-* [Výstupy projektu](#výstup-projektu)
+* [Výstup projektu](#výstup-projektu)
 
 ## Úvod do projektu:
 Analytické oddělení naší organizace, která se zabývá vývojem životní úrovně občanů v Česku, chce odpovědět na několik definovaných výzkumných otázek. Ty adresují dostupnost základních potravin veřejnosti. Kolegové již vydefinovali základní otázky, na které se pokusí odpovědět a poskytnout tuto informaci tiskovému oddělení, a to pro účely prezentace na následující konferenci zaměřené na tuto oblast. Požadují proto datové podklady, z kterých bude jasné porovnání dostupnosti potravin na základě průměrných příjmů za určité časové období. Jako podpůrný materiál chtějí také tabulku s HDP, GINI koeficientem a populací dalších evropských zemí, a to za stejné období jako přehled pro Česko.
@@ -42,7 +42,7 @@ Poklesy nominálním mezd a platů lze patrně přičíst ekonomickému vývoji 
 ### 2. Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
 Na tuto otázku se nedá na základě dostupných dat obecně odpovědět - nelze určit celkovou průměrnou mzdu za všechna odvětví dohromady. Data za počet zaměstnanců jsou dostupná v prvním a posledním sledovaném odbobí jen za vybraná odvětví - v roce 2006 pro devět (navíc různými způsoby výpočtu - fyzicky, přepočtením) a v roce 2018 pro deset z 19. Nelze proto vypočítat celkovou průměrnou mzdu v Česku pomocí váženého průměru. Posuzovat tedy lze (pokud chceme posoudit roky 2006 a 2018 jako výchozí a konečné roky) pouze vývoj za jednotlivá odvětví. Protože cena chleba vzrostla mezi lety 2006 a 2018 z 16.12 Kč na 24.24, tedy o 50.37 %, pak v odvětvích, v nichž docházelo k pomalejšímu růstu průměrných mezd si pracovníci mohli pořídit v roce 2018 méně nebo stejně kilogramů chleba. Například v Administrativních a podpůrných činnostech to byl pokles z 896.03 na 864.4 kg chleba, dále Činnosti v oblasti nemovitostí z 1193.67 na 1159.61, Ostatní činnosti z 1022.57 na 977.58, Peněžnictví z 2483 na 2264.16, Těžba a dobývání z 1492.97 na 1486.76 Ve zbývajících odvětvích si naopak zaměstnanci mohli ze mzdy/platu pořídit více. Cena mléka pak vzrostla mezi sledovanými lety z 14.44 Kč na 19.82 Kč, což byl růst o 37.26 %. Proto si jednotek mléka mohli pořídit v roce 2018 více než na začátku sledovaného období pracovníci ze všech odvětví, vyjma Peněžnictví a pojišťovnictví, v němž došlo k poklesu z 2771.95 na 2769.08 litru mléka.
 ### 3. Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?
---> TODO - jak chceme růsty, ale za roky
+Odpověď na tuto otázku bude záviset na tom, jak pojmeme meziroční nárůst ceny. Je možné porovnat například první rok s posledním a vypočítat změnu. Jiným způsobem může být počítání průměru z meziročních cen
 ### 4. Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?
 -->  TODO
 ### 5. Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?
