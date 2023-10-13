@@ -1,5 +1,5 @@
 CREATE OR REPLACE TABLE t_petr_musil_project_SQL_primary_final 
-WITH cpay_aggregated AS (
+    WITH cpay_aggregated AS (
         SELECT 
             cpib.name AS industry_name,
             cpay.payroll_year AS year_cp,
