@@ -1,3 +1,5 @@
+-- by petr_m_10 (discord name) or Petr_M
+
 CREATE OR REPLACE TABLE t_petr_musil_project_SQL_primary_final 
     WITH cpay_aggregated AS (
         SELECT 
