@@ -1,4 +1,4 @@
--- Roční změny mezd a cen
+-- Annual changes of salaries and prices
 WITH prices_salaries_change AS (
     WITH prices_annual_change AS (
         SELECT 
@@ -41,7 +41,7 @@ WITH prices_salaries_change AS (
         tpm.food_category = 'Banány žluté'
     GROUP BY 
         tpm.year_cp
-) -- Roční změny HDP
+) -- Annual changes in GDP
 SELECT 
     tpms.`year`,
     round(

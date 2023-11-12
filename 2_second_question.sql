@@ -23,5 +23,5 @@ GROUP BY
 ORDER BY 
 	tpm.year_cp, 
 	tpm.industry_name
--- Jinak dva řádky pro každý rok
+-- Otherwise two rows for every year
 LIMIT 38;

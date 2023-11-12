@@ -9,9 +9,9 @@ FROM
     countries c
     INNER JOIN economies e ON c.country = e.country
 WHERE 
-    -- Pouze evropské země
+    -- Only european countries
     c.continent = 'Europe'
-    -- Pouze období z první výstupní tabulky
+    -- Only period from the first input table
     AND e.`year` BETWEEN 2006 AND 2018
 ORDER BY 
     c.country,
